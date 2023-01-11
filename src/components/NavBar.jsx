@@ -5,7 +5,6 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Hidden from '@mui/material/Hidden';
 import IconButton from '@mui/material/IconButton';
-// import Link from '@mui/material/Link';
 import { Link } from 'react-scroll';
 import Toolbar from '@mui/material/Toolbar';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
@@ -39,9 +38,23 @@ const StyledLink = styled(Link) ({
 function NavBar() {
 
     const [open, setOpen] = useState(false);
+    const [navbar, setNavbar] = useState(false);
+
+    const changeBackground = () => {
+        if (window.scrollY >= 130) {
+            setNavbar(true);
+        } else {
+            setNavbar(false);
+        }
+    }
+
+    window.addEventListener('scroll', changeBackground);
 
     return (
-        <AppBar position='fixed' elevation={1} color='transparent'>
+        <AppBar 
+            color={navbar ? 'secondary' : 'transparent'} 
+            position='fixed' 
+            elevation={1}>
             <Container maxWidth='lg'>
                 <Box my={2}>
                     <Toolbar disableGutters>
