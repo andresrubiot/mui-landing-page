@@ -12,7 +12,7 @@ const StyledPaper = styled(Paper) ({
 function HeroSection() {
 
     const [show, setShow] = useState(false)
-    useEffect(() => setShow(true))
+    useEffect(() => setShow(true), [])
 
     return (
         <StyledPaper elevation={0}>
