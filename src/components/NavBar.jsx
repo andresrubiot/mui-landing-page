@@ -34,7 +34,7 @@ const StyledLink = styled(Link) ({
     marginRight: 20,
 });
 
-function Header() {
+function NavBar() {
 
     const [open, setOpen] = useState(false);
 
@@ -107,4 +107,4 @@ function Header() {
     )
 }
 
-export default Header
+export default NavBar
