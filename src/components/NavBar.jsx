@@ -5,7 +5,8 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Hidden from '@mui/material/Hidden';
 import IconButton from '@mui/material/IconButton';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
+import { Link } from 'react-scroll';
 import Toolbar from '@mui/material/Toolbar';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Divider from '@mui/material/Divider';
@@ -18,11 +19,11 @@ import Logo from './Logo';
 const links = [
     { 
         name: 'INICIO',
-        href: ''
+        href: 'home'
     },
     { 
         name: 'BENEFICIOS',
-        href: ''
+        href: 'benefits'
     },
     { 
         name: 'Login',
@@ -31,6 +32,7 @@ const links = [
 ]
 
 const StyledLink = styled(Link) ({
+    cursor: 'pointer',
     marginRight: 20,
 });
 
@@ -49,10 +51,14 @@ function NavBar() {
                                 links.map((link) => (
                                     <StyledLink /* TODO border gradient */
                                         key={link.name} 
-                                        href={ link.href } 
-                                        color='textPrimary' 
                                         variant='link' 
                                         underline='none'
+                                        activeClass='active'
+                                        to={ link.href }
+                                        spy={ true }
+                                        smooth={ true }
+                                        offset={ -100 }
+                                        duration= { 500 }
                                     >
                                         { link.name }
                                     </StyledLink>
@@ -90,10 +96,14 @@ function NavBar() {
                             <ListItem>
                                 <StyledLink 
                                     key={link.name} 
-                                    href={ link.href } 
-                                    color='textPrimary' 
                                     variant='link' 
                                     underline='none'
+                                    activeClass='active'
+                                    to={ link.href }
+                                    spy={ true }
+                                    smooth={ true }
+                                    offset={ -100 }
+                                    duration= { 500 }
                                 >
                                     { link.name }
                                 </StyledLink>

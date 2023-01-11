@@ -15,7 +15,7 @@ function HeroSection() {
     useEffect(() => setShow(true), [])
 
     return (
-        <StyledPaper elevation={0}>
+        <StyledPaper elevation={0} id='home'>
             <Container maxWidth="md" className='h-100'>
                 <Grid container alignItems='center' className='h-100'>
                     <Grow in={show} style={{ transformOrigin: '5 5 5' }} {...(show ? { timeout: 2000 } : {})}>
