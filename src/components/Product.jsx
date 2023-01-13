@@ -1,11 +1,32 @@
 import React from 'react'
 import { CardMedia, Container, Grid, Paper, styled, Typography } from '@mui/material';
 
-const StyledPaper = styled(Paper) ({
+const StyledPaper = styled(Paper)((props) => ({
+    background: 'transparent',
+    marginTop: '-50px',
     minHeight: '391px',
+    paddingBottom: '20px',
+    position: 'relative',
+}));
+
+const StyledGradient = styled(Paper)((props) => ({
     background: 'linear-gradient(270deg, #00E6E3 2.73%, #00FF68 100%)',
-    paddingBottom: '20px'
-});
+    clipPath: 'polygon(0 4%, 100% 0, 100% 96%, 0 100%)',
+    height: '100%',
+    position: 'absolute',
+    width: '100%',
+    zindex: '2',
+
+    [props.theme.breakpoints.only("sm")]: {
+        height: '80%'
+    },
+
+    [props.theme.breakpoints.down("md")]: {
+        clipPath: 'polygon(0 3%, 100% 0, 100% 97%, 0 100%)',
+        // height: '80%'
+    },
+
+}));
 
 const StyledTypography = styled(Typography)((props) => ({
     textAlign: 'right',
@@ -19,18 +40,18 @@ function Product() {
 
     return (
         <StyledPaper>
-            <Container maxWidth='md' className='h-100'>
-                <Grid container maxWidth='md' alignItems='center' className='h-100'>
-                    <Grid item xs={12} sm={6}>
+            <StyledGradient className='overlay'></StyledGradient>
+            <Container maxWidth='md'>
+                <Grid container maxWidth='md' alignItems='center' zIndex={100} position='relative'>
+                    <Grid item xs={12} sm={6} my='-20px'>
                         <CardMedia
                             component="img"
                             image="product.png"
-                            sx={{ maxWidth: 'sm' }}
                             alt="América de Cali Product"
                         />
                     </Grid>
 
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12} sm={6} mt={2}>
                         <StyledTypography variant="h3" color="initial">
                             Trabajamos para    
                         </StyledTypography>
