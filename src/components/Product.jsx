@@ -1,5 +1,10 @@
 import React from 'react'
-import { CardMedia, Container, Grid, Paper, styled, Typography } from '@mui/material';
+import CardMedia from '@mui/material/CardMedia';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import { styled } from '@mui/material';
+import Typography from '@mui/material/Typography';
 
 const StyledPaper = styled(Paper)((props) => ({
     background: 'transparent',
