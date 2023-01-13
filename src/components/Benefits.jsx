@@ -3,6 +3,8 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const StyledTypography = styled(Typography) ({
     variant: 'span',
@@ -13,6 +15,25 @@ const StyledTypography = styled(Typography) ({
     lineHeight: '42px',
     color: 'initial',
 });
+
+const responsive = {
+    superLargeDesktop: {
+        breakpoint: { max: 4000, min: 3000 },
+        items: 4
+    },
+    desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 4
+    },
+    tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2
+    },
+    mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1
+    }
+};
 
 function Benefits() {
     return (
@@ -30,6 +51,40 @@ function Benefits() {
                     <Typography variant="p" component="p" fontSize={36}>
                         <b>Ofrecemos</b> se encuentran
                     </Typography>
+                </Grid>
+
+                <Grid item xs={12}>
+                    <Carousel 
+                        responsive={responsive} 
+                        infinite={true}
+                        showDots={true}>
+                        
+                        <div>
+                            <img src="assets/benefits/flexibilidadHoraria.svg" alt="Flexibilidad Horaria" />
+                            Flexibilidad Horaria
+                        </div>
+                        <div>
+                            <img src="assets/benefits/flexibilidadHoraria.svg" alt="Flexibilidad Horaria" />
+                            Flexibilidad Horaria
+                        </div>
+                        <div>
+                            <img src="assets/benefits/flexibilidadHoraria.svg" alt="Flexibilidad Horaria" />
+                            Flexibilidad Horaria
+                        </div>
+                        <div>
+                            <img src="assets/benefits/flexibilidadHoraria.svg" alt="Flexibilidad Horaria" />
+                            Flexibilidad Horaria
+                        </div>
+                        <div>
+                            <img src="assets/benefits/flexibilidadHoraria.svg" alt="Flexibilidad Horaria" />
+                            Flexibilidad Horaria
+                        </div>
+                        <div>
+                            <img src="assets/benefits/flexibilidadHoraria.svg" alt="Flexibilidad Horaria" />
+                            Flexibilidad Horaria
+                        </div>
+                        
+                    </Carousel>
                 </Grid>
             </Grid>
         </Container>
