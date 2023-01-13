@@ -21,3 +21,8 @@
 .d-flex {
   display: flex;
 }
+
+.bg-gradient {
+  background: linear-gradient(270deg, #00E6E3 2.73%, #00FF68 100%);
+  padding: 10px;
+}

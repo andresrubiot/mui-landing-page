@@ -28,7 +28,6 @@ const StyledGradient = styled(Paper)((props) => ({
 
     [props.theme.breakpoints.down("md")]: {
         clipPath: 'polygon(0 3%, 100% 0, 100% 97%, 0 100%)',
-        // height: '80%'
     },
 
 }));
@@ -44,7 +43,7 @@ const StyledTypography = styled(Typography)((props) => ({
 function Product() {
 
     return (
-        <StyledPaper>
+        <StyledPaper elevation={0}>
             <StyledGradient className='overlay'></StyledGradient>
             <Container maxWidth='md'>
                 <Grid container maxWidth='md' alignItems='center' zIndex={100} position='relative'>
