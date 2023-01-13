@@ -1,26 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { Card, CardContent, CardMedia, Container, Grid, IconButton, Paper, styled, Typography } from '@mui/material';
-import { Box } from '@mui/system';
+import React from 'react'
+import { CardMedia, Container, Grid, Paper, styled, Typography } from '@mui/material';
 
 const StyledPaper = styled(Paper) ({
     minHeight: '391px',
     background: 'linear-gradient(270deg, #00E6E3 2.73%, #00FF68 100%)',
     paddingBottom: '20px'
 });
-
-// const StyledTypography = styled(Typography) ({
-//     textAlign: 'right',
-    
-//     sx: {
-//         textAlign: {
-//             xs: 'center',
-//             sm: 'right'
-//         },
-//         marginBottom: {
-//             xs: '10px'
-//         }
-//     }
-// });
 
 const StyledTypography = styled(Typography)((props) => ({
     textAlign: 'right',
@@ -31,9 +16,6 @@ const StyledTypography = styled(Typography)((props) => ({
 }));
 
 function Product() {
-
-    const [show, setShow] = useState(false)
-    useEffect(() => setShow(true), [])
 
     return (
         <StyledPaper>
