@@ -9,10 +9,11 @@ import { Link } from 'react-scroll';
 import Toolbar from '@mui/material/Toolbar';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Divider from '@mui/material/Divider';
-import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
+import MenuIcon from './MenuIcon';
+import CloseIcon from './CloseIcon';
 import Logo from './Logo';
 
 const links = [
@@ -62,7 +63,7 @@ function NavBar() {
                         <Hidden mdDown>
                             {
                                 links.map((link) => (
-                                    <StyledLink /* TODO border gradient */
+                                    <StyledLink
                                         key={link.name} 
                                         variant='link' 
                                         underline='none'
@@ -81,7 +82,7 @@ function NavBar() {
 
                         <Hidden smUp>
                             <IconButton onClick={() => setOpen(true)}>
-                                <MenuIcon color="success"/> {/* TODO gradient */}
+                                <MenuIcon />
                             </IconButton>
                         </Hidden>
                     </Toolbar>
@@ -97,7 +98,7 @@ function NavBar() {
                 <div className='d-flex m-10'>
                     <Logo/>
                     <IconButton onClick={() => setOpen(false)}>
-                        <CloseRoundedIcon sx={{ fontSize: 40 }} color="success"/> {/* TODO gradient */}
+                        <CloseIcon/>
                     </IconButton>
                 </div>
 
