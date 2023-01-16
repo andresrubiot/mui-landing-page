@@ -9,7 +9,6 @@ import { Link } from 'react-scroll';
 import Toolbar from '@mui/material/Toolbar';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Divider from '@mui/material/Divider';
-import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import MenuIcon from './MenuIcon';
