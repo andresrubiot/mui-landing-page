@@ -23,9 +23,9 @@ class SlickCarousel extends Component {
                     }
                 },
                 {
-                    breakpoint: 600,
+                    breakpoint: 768,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 3,
                         slidesToScroll: 2,
                         initialSlide: 2
                     }
@@ -33,7 +33,7 @@ class SlickCarousel extends Component {
                 {
                     breakpoint: 480,
                     settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 2,
                         slidesToScroll: 1
                     }
                 }
@@ -71,7 +71,7 @@ class SlickCarousel extends Component {
             <Slider {...settings}>
                 {
                     benefits.map((benefit) => (
-                        <Grid item xs={8} sm={8} my={10} key={ benefit.txt }>
+                        <Grid item xs={10} sm={8} my={10} key={ benefit.txt }>
                             <CardMedia
                                 component="img"
                                 image={ benefit.src }
