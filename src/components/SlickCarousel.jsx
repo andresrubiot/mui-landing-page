@@ -71,7 +71,7 @@ class SlickCarousel extends Component {
             <Slider {...settings}>
                 {
                     benefits.map((benefit) => (
-                        <Grid item xs={12} sm={8} my={10} key={ benefit.txt }>
+                        <Grid item xs={8} sm={8} my={10} key={ benefit.txt }>
                             <CardMedia
                                 component="img"
                                 image={ benefit.src }
