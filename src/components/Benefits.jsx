@@ -3,6 +3,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material";
+import SlickCarousel from "./SlickCarousel";
 
 const StyledTypography = styled(Typography) ({
     variant: 'span',
@@ -30,6 +31,9 @@ function Benefits() {
                     <Typography variant="p" component="p" fontSize={36}>
                         <b>Ofrecemos</b> se encuentran
                     </Typography>
+
+                    <SlickCarousel/>
+
                 </Grid>
             </Grid>
         </Container>
