@@ -9,38 +9,41 @@ import Box from '@mui/material/Box';
 function Benefits() {
     return (
         <Container maxWidth='md'>
-            <Grid container textAlign='center' my={5}>
-                <Grid item xs={12}>
-                    <Typography variant="h5" component="h5" fontSize={36}>
-                        Gracias por <b className="txt-gradient">completar el ejercicio</b>
-                    </Typography>
+            <Box minHeight={300}>
+                <Grid container textAlign='center' my={5}>
+                    <Grid item xs={12}>
+                        <Typography variant="h5" component="h5" fontSize={36}>
+                            Gracias por <b className="txt-gradient">completar el ejercicio</b>
+                        </Typography>
 
-                    <Typography variant="p" component="p">
-                        Te invitamos a ver más información
-                    </Typography>
+                        <Typography variant="p" component="p">
+                            Te invitamos a ver más información
+                        </Typography>
 
+                    </Grid>
                 </Grid>
-            </Grid>
-
-            <Box
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-            >
-                <Box mx={2}>
-                    <InstagramIcon/>
+            
+                <Box
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                >
+                    <Box mx={2}>
+                        <InstagramIcon/>
+                    </Box>
+                    
+                    <a
+                        href="https://wacoservices.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        underline='none'>
+                        <Button className="btn-gradient">
+                            Conocer más
+                        </Button>
+                    </a>
                 </Box>
-                
-                <a
-                    href="https://wacoservices.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    underline='none'>
-                    <Button className="btn-gradient">
-                        Conocer más
-                    </Button>
-                </a>
             </Box>
+
         </Container>
     )
 }
