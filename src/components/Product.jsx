@@ -52,6 +52,7 @@ function Product() {
                             component="img"
                             image="product.png"
                             alt="América de Cali Product"
+                            className='product-img'
                         />
                     </Grid>
 
