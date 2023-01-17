@@ -17,7 +17,7 @@ const StyledTypography = styled(Typography) ({
 
 function Benefits() {
     return (
-        <Container maxWidth='md'>
+        <Container maxWidth='md' name='benefits'>
             <Grid container textAlign='center' my={5}>
                 <Grid item xs={12}>
                     <Typography variant="p" component="p" fontSize={36}>

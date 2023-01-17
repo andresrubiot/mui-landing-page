@@ -16,15 +16,15 @@ import CloseIcon from './CloseIcon';
 import Logo from './Logo';
 
 const links = [
-    { 
+    {
         name: 'INICIO',
         href: 'home'
     },
-    { 
+    {
         name: 'BENEFICIOS',
         href: 'benefits'
     },
-    { 
+    {
         name: 'Login',
         href: ''
     },
@@ -79,7 +79,7 @@ function NavBar() {
                             }
                         </Hidden>
 
-                        <Hidden smUp>
+                        <Hidden mdUp>
                             <IconButton onClick={() => setOpen(true)}>
                                 <MenuIcon />
                             </IconButton>
