@@ -5,6 +5,12 @@ a {
   text-decoration: none;
 }
 
+.hr-footer {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(35, 35, 35, .2),rgba(35, 35, 35, 1),rgba(35, 35, 35, .2));
+}
+
 .active {
   color: #FFF;
   font-weight: bold;;

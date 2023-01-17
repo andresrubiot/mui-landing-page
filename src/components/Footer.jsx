@@ -1,18 +1,22 @@
 import React from "react";
+import Container from "@mui/material/Container";
 import Box from '@mui/material/Box';
 import Logo from './Logo';
 
 function Footer() {
     return (
-        <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-        >
-            <Box>
-                <Logo/>
+        <Container maxWidth='md'>
+            <hr className="hr-footer"/>
+            <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+            >
+                <Box>
+                    <Logo/>
+                </Box>
             </Box>
-        </Box>
+        </Container>
     )
 }
 
