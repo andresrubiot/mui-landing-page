@@ -8,7 +8,7 @@ a {
 .hr-footer {
     border: 0;
     height: 1px;
-    background-image: linear-gradient(left, rgba(35, 35, 35, .2),rgba(35, 35, 35, 1),rgba(35, 35, 35, .2));
+    background-image: linear-gradient(rgba(35, 35, 35, .2),rgba(35, 35, 35, 1),rgba(35, 35, 35, .2));
 }
 
 .active {
