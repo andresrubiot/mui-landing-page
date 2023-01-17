@@ -1,50 +1,58 @@
 import React from "react";
-import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import InstagramIcon from "./InstagramIcon";
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 
+let squares = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
 function Benefits() {
     return (
-        <Container maxWidth='md'>
-            <Box minHeight={300}>
-                <Grid container textAlign='center' my={5}>
-                    <Grid item xs={12}>
-                        <Typography variant="h5" component="h5" fontSize={36}>
-                            Gracias por <b className="txt-gradient">completar el ejercicio</b>
-                        </Typography>
+        <div className="container">
+            <div className='squares'>
+                {
+                    squares.map((square) => (
+                        <div className='square' key={square}></div>
+                    ))
+                }
 
-                        <Typography variant="p" component="p">
-                            Te invitamos a ver más información
-                        </Typography>
+                <Box minHeight={300} position='absolute'>
+                    <Grid container textAlign='center' my={5}>
+                        <Grid item xs={12}>
+                            <Typography variant="h5" component="h5" fontSize={36}>
+                                Gracias por <b className="txt-gradient">completar el ejercicio</b>
+                            </Typography>
 
+                            <Typography variant="p" component="p">
+                                Te invitamos a ver más información
+                            </Typography>
+
+                        </Grid>
                     </Grid>
-                </Grid>
-            
-                <Box
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
-                >
-                    <Box mx={2}>
-                        <InstagramIcon/>
-                    </Box>
-                    
-                    <a
-                        href="https://wacoservices.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        underline='none'>
-                        <Button className="btn-gradient">
-                            Conocer más
-                        </Button>
-                    </a>
-                </Box>
-            </Box>
 
-        </Container>
+                    <Box
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                    >
+                        <Box mx={2}>
+                            <InstagramIcon />
+                        </Box>
+
+                        <a
+                            href="https://wacoservices.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            underline='none'>
+                            <Button className="btn-gradient">
+                                Conocer más
+                            </Button>
+                        </a>
+                    </Box>
+                </Box>
+            </div>
+        </div>
     )
 }
 
