@@ -4,12 +4,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import InstagramIcon from "./InstagramIcon";
 import Button from '@mui/material/Button';
-import { Box, styled } from '@mui/material';
-
-const StyledButton = styled(Button)({
-    background: 'linear-gradient(270deg, #00E6E3 2.73 %, #00FF68 100 %)',
-    borderRadius: '30'
-});
+import Box from '@mui/material/Box';
 
 function Benefits() {
     return (
