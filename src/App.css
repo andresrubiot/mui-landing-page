@@ -22,7 +22,7 @@ a {
 .txt-gradient {
   background: linear-gradient(270deg, #00E6E3 2.73%, #00FF68 100%);
     background-clip: text;
-    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
