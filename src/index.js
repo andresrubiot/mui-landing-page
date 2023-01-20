@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './routes/Login'
 
 let darkTheme = createTheme({
   palette: {
@@ -19,7 +21,12 @@ root.render(
     <React.StrictMode>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
-        <App />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<App /> } />
+            <Route path="login" element={<Login /> } />
+          </Routes>
+        </BrowserRouter>
       </ThemeProvider>
     </React.StrictMode>
 );
